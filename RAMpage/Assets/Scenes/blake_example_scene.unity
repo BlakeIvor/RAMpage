@@ -193,8 +193,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3474a27e7d91b844eb2b41e3af750f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forward: 0.4
-  backward: -0.5
+  forwardForce: 1
+  backwardForce: 1
+  forwardVerticalY: 2
+  backwardVerticalY: 1
+  maxReverse: -2
+  maxForward: 8
 --- !u!61 &72994605
 BoxCollider2D:
   m_ObjectHideFlags: 0
