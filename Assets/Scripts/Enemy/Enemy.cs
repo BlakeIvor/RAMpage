@@ -7,11 +7,17 @@ public class Enemy : MonoBehaviour
     [Header("Enemy Variables")]
     [SerializeField] float health;
     [SerializeField] float baseDamage;
+    [SerializeField] float cooldown;
     [SerializeField] int Reward;
+    [SerializeField] Collider2D Hitbox;
+    public EnemyObject Type;
 
     public void Start()
     {
         gameManager = GameManager.instance;
+        health = Type.health;
+        baseDamage = Type.damage;
+        Reward = Type.reward;
     }
 
     public void Damage(float damage)
@@ -35,5 +41,10 @@ public class Enemy : MonoBehaviour
         {
             Damage(gameManager.CalculateMovingDamage(player.prevVelocityX));
         }
+    }
+
+    private void Update()
+    {
+
     }
 }
