@@ -34,9 +34,14 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerMovement>(out PlayerMovement player))
+        if (collision.TryGetComponent<PlayerMovement>(out PlayerMovement player) && this.gameObject.tag == "IntroWall")
         {
+            gameManager.updateAllowInput(true);
             Damage(gameManager.CalculateMovingDamage(player.prevVelocityX));
+        } 
+        else if (collision.TryGetComponent<PlayerMovement>(out PlayerMovement p))
+        {
+            Damage(gameManager.CalculateMovingDamage(p.prevVelocityX));
         }
     }
 }
