@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float cooldown;
     [SerializeField] int Reward;
     [SerializeField] Collider2D Hitbox;
+    [SerializeField] float speed;
+    private GameObject Player;
     public EnemyObject Type;
 
     public void Start()
@@ -18,6 +20,9 @@ public class Enemy : MonoBehaviour
         health = Type.health;
         baseDamage = Type.damage;
         Reward = Type.reward;
+        speed = Type.speed;
+        
+
     }
 
     public void Damage(float damage)
@@ -45,6 +50,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-
+        var step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, step);
     }
+
 }
