@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3670599ed91d86488c310dfc8a1fd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 400
 --- !u!61 &1661765081643274993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8235417696580939748}
   - component: {fileID: 1066797389915227928}
   m_Layer: 0
-  m_Name: ExampleWall
+  m_Name: ExampleWallVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

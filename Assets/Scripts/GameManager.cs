@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         if (moveSpeed > 0.5)
         {
-            float damage = moveSpeed / maxMovementSpeed * baseDamage;
+            float damage = moveSpeed * baseDamage;
             return damage;
         }
         return 0.01f;
