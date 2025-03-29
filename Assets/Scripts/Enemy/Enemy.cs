@@ -6,16 +6,16 @@ public class Enemy : MonoBehaviour
 {
     GameManager gameManager;
     [Header("Enemy Variables")]
-    [SerializeField] float health;
-    [SerializeField] float baseDamage;
-    [SerializeField] float cooldown;
+    [SerializeField] public float health;
+    [SerializeField] public float baseDamage;
+    [SerializeField] public float cooldown;
     [SerializeField] int Reward;
     [SerializeField] Collider2D Hitbox;
     [SerializeField] float speed;
     [SerializeField] float AttackRadius;
     private GameObject Player;
     public EnemyObject Type;
-    [SerializeField] bool CanAttack;
+    public bool CanAttack = true;
 
     public void Start()
     {
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void attack()
+    public virtual void attack()
     {
         if (CanAttack)
         {
@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         var step = speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, step);
