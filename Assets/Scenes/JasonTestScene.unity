@@ -264,8 +264,8 @@ Transform:
   m_GameObject: {fileID: 177174613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 36, y: 30, z: 1}
+  m_LocalPosition: {x: 10.1872, y: 0, z: 0}
+  m_LocalScale: {x: 56.376, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1279610414}
@@ -1534,6 +1534,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1544173532351445416, guid: c9c2476f694ee064cb9d6296281d17e6, type: 3}
+      propertyPath: m_TagString
+      value: IntroWall
+      objectReference: {fileID: 0}
     - target: {fileID: 5408964614887138075, guid: c9c2476f694ee064cb9d6296281d17e6, type: 3}
       propertyPath: health
       value: 0.001
@@ -2320,7 +2324,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1100640723083173600, guid: c9c2476f694ee064cb9d6296281d17e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.41
+      value: 28.1
       objectReference: {fileID: 0}
     - target: {fileID: 1100640723083173600, guid: c9c2476f694ee064cb9d6296281d17e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2466,7 +2470,7 @@ MonoBehaviour:
   - {fileID: 747432363}
   - {fileID: 1636339923}
   - {fileID: 1461826748}
-  scatterForce: 500
+  scatterSpeed: 1
   scatterRange: 300
 --- !u!1 &2002139987
 GameObject:
@@ -2506,6 +2510,7 @@ MonoBehaviour:
   clickDamage: 0
   clickCooldown: 0
   currentMoney: 100
+  allowInput: 0
 --- !u!4 &2002139989
 Transform:
   m_ObjectHideFlags: 0

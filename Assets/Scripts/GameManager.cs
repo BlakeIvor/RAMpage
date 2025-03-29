@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int currentMoney;
     // [SerializeField] float moneyMultiplier
 
-    private bool allowInput;
+    [SerializeField] bool allowInput;
 
     public static GameManager instance { get; private set; }
 
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             float damage = moveSpeed / maxMovementSpeed * baseDamage;
             return damage;
         }
-        return 0;
+        return 0.01f;
     }
     
     public void updateAllowInput(bool b)
