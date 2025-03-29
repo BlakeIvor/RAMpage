@@ -1,10 +1,14 @@
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //THIS IS THE PLAYER INSTANCE
+    public static PlayerMovement instance;
+
     GameManager gameManager;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     [SerializeField] float forwardForce, backwardForce, forwardVerticalY, backwardVerticalY;
     float verticalY;
     [SerializeField] float maxReverse, maxForward;
@@ -12,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     public float prevVelocityX = 0; // USED FOR GETTING THE SPEED RIGHT BEFORE A COLLISION
     private float timeCalculatingBeforeCollision = 1;
     private float timer = 0f;
+
+    private void Awake()
+    {
+        if(!instance) instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

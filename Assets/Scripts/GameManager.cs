@@ -3,12 +3,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("Battering Ram Variables")]
-    [SerializeField] float health;
-    [SerializeField] float baseDamage;
-    [SerializeField] float minMovementSpeed;
-    [SerializeField] float maxMovementSpeed;
-    [SerializeField] float chargeSpeed;
-    [SerializeField] float maxCharge;
+    public float health;
+    public float baseDamage;
+    public float minMovementSpeed;
+    public float maxMovementSpeed;
+    public float chargeSpeed;
+    public float maxCharge;
 
     [Header("Shoot Variables")]
     [SerializeField] float clickDamage;
