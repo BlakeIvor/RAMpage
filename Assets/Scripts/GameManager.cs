@@ -10,9 +10,7 @@ public class GameManager : MonoBehaviour
     public float chargeSpeed;
     public float maxCharge;
 
-    [Header("Shoot Variables")]
-    [SerializeField] float clickDamage;
-    [SerializeField] float clickCooldown;
+    public AbilitiesStruct[] activeAbilities;
 
     [Header("Economy Variables")]
     [SerializeField] int currentMoney;
@@ -51,22 +49,10 @@ public class GameManager : MonoBehaviour
                 baseDamage += change;
                 break;
             case 2:
-                minMovementSpeed += change;
-                break;
-            case 3:
                 maxMovementSpeed += change;
                 break;
-            case 4:
-                chargeSpeed += change;
-                break;
-            case 5:
+            case 3:
                 maxCharge += change;
-                break;
-            case 6:
-                clickDamage += change;
-                break;
-            case 7:
-                clickCooldown += change;
                 break;
         }
     }

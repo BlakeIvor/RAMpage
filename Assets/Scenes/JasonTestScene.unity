@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &62631287
 Transform:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &243707226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42ba5de2590b914b8b292efbe0034e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilitySlots: []
 --- !u!4 &664636161
 Transform:
   m_ObjectHideFlags: 0
@@ -1603,7 +1604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1279610414
 Transform:
   m_ObjectHideFlags: 0
@@ -1687,7 +1688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1361712145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1789,7 +1790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1417782384
 Transform:
   m_ObjectHideFlags: 0
@@ -2048,6 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3474a27e7d91b844eb2b41e3af750f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   forwardForce: 1
   backwardForce: 1
   forwardVerticalY: 2
@@ -2507,8 +2509,6 @@ MonoBehaviour:
   maxMovementSpeed: 8
   chargeSpeed: 0
   maxCharge: 0
-  clickDamage: 0
-  clickCooldown: 0
   currentMoney: 100
   allowInput: 0
 --- !u!4 &2002139989
