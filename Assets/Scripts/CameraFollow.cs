@@ -7,19 +7,21 @@ public class Camera : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float lerpX, lerpY;
     [SerializeField] float positionX, positionY, positionZ;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.position = target.position;
         positionX = target.position.x;
         positionY = target.position.y;
+        Follow();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target) Follow();
+        if(target && GameManager.instance.getAllowInput()) Follow();
     }
 
     void Follow()

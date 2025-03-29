@@ -28,24 +28,27 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetAxis("Horizontal") < 0) { // Reverse 
-            rb.AddForce(backwardForceVec);
-        } else rb.AddForce(forwardForceVec); // Accelerate
-        rb.linearVelocity = new Vector2(Mathf.Clamp(rb.linearVelocity.x, maxReverse, maxForward), rb.linearVelocity.y); //Max/min
-
-        // Can't move up/down as fast is backing up
-        if (rb.linearVelocity.y > 1) verticalY = forwardVerticalY; else verticalY = backwardVerticalY;
-
-        // Move up/down
-        if (Input.GetAxis("Vertical") < 0) transform.Translate(0, -verticalY * Time.deltaTime, 0);
-        else if (Input.GetAxis("Vertical") > 0) transform.Translate(0, verticalY * Time.deltaTime, 0);
-
-
-        timer += Time.deltaTime;
-        if (timer >= timeCalculatingBeforeCollision)
+        if (gameManager.getAllowInput())
         {
-            timer = 0f; // Reset timer
-            prevVelocityX = rb.linearVelocity.x;
+            if (Input.GetAxis("Horizontal") < 0) { // Reverse 
+                rb.AddForce(backwardForceVec);
+            } else rb.AddForce(forwardForceVec); // Accelerate
+                rb.linearVelocity = new Vector2(Mathf.Clamp(rb.linearVelocity.x, maxReverse, maxForward), rb.linearVelocity.y); //Max/min
+
+            // Can't move up/down as fast is backing up
+            if (rb.linearVelocity.y > 1) verticalY = forwardVerticalY; else verticalY = backwardVerticalY;
+
+            // Move up/down
+            if (Input.GetAxis("Vertical") < 0) transform.Translate(0, -verticalY * Time.deltaTime, 0);
+            else if (Input.GetAxis("Vertical") > 0) transform.Translate(0, verticalY * Time.deltaTime, 0);
+
+
+            timer += Time.deltaTime;
+            if (timer >= timeCalculatingBeforeCollision)
+            {
+                timer = 0f; // Reset timer
+                prevVelocityX = rb.linearVelocity.x;
+            }
         }
     }
 

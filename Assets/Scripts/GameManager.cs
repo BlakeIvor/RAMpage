@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] int currentMoney;
     // [SerializeField] float moneyMultiplier
 
+    private bool allowInput;
+
     public static GameManager instance { get; private set; }
 
     private void Awake()
@@ -79,4 +81,14 @@ public class GameManager : MonoBehaviour
         return 0;
     }
     
+    public void updateAllowInput(bool b)
+    {
+        allowInput = b;
+    }
+
+    public bool getAllowInput()
+    {
+        return allowInput;
+    }
+
 }
