@@ -68,4 +68,15 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public float CalculateMovingDamage(float moveSpeed)
+    {
+        if (moveSpeed > 0.5)
+        {
+            float damage = moveSpeed / maxMovementSpeed * baseDamage;
+            return damage;
+        }
+        return 0;
+    }
+    
 }
