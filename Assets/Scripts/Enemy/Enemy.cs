@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         baseDamage = Type.damage;
         Reward = Type.reward;
         speed = Type.speed;
-        
+        Player = GameObject.FindWithTag("Player");
 
     }
 
