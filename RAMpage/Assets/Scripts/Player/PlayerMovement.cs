@@ -17,5 +17,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.A)) rb.AddForce(backwardVec); else rb.AddForce(forwardVec);
+        
     }
 }
