@@ -7,25 +7,33 @@ public class Archer : Enemy
     public float minDeviation;
     public float maxDeviation;
     [SerializeField] private float arrowSpeed;
-
+    private Transform player;
+    public float AttackRadius;
     override public void attack()
     {
-        GameObject Bullet = Instantiate(projectile, transform.position, Quaternion.identity);
-        Transform target = GameObject.FindWithTag("Player").transform;
+        float distanceX = Mathf.Abs(player.position.x - transform.position.x);
+        
+        Debug.Log(distanceX);
+        Debug.Log(distanceX <= AttackRadius);
+        if (distanceX <= AttackRadius) {
+            GameObject Bullet = Instantiate(projectile, transform.position, Quaternion.identity);
+            Transform target = GameObject.FindWithTag("Player").transform;
 
-        Vector3 directionVector = (target.position - transform.position).normalized;
+            Vector3 directionVector = (target.position - transform.position).normalized;
 
-        Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = directionVector * arrowSpeed;
-        float angle = Mathf.Atan2(directionVector.y, directionVector.x) * Mathf.Rad2Deg;
-        Bullet.transform.rotation = Quaternion.Euler(0,0,angle);
+            Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = directionVector * arrowSpeed;
+            float angle = Mathf.Atan2(directionVector.y, directionVector.x) * Mathf.Rad2Deg;
+            Bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        StartCoroutine(AttackCooldown());
+            StartCoroutine(AttackCooldown());
+        }
     }
 
 
     public override void Update()
     {
+        if (!player) player = GameObject.Find("PlayerBase").transform;
         if (CanAttack)
         {
             CanAttack = false;

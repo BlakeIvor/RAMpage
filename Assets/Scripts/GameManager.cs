@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public float chargeSpeed;
     public float maxCharge;
 
+
     public AbilitiesStruct[] activeAbilities;
 
     [Header("Economy Variables")]
