@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float prevVelocityX = 0; // USED FOR GETTING THE SPEED RIGHT BEFORE A COLLISION
     private float timeCalculatingBeforeCollision = 1;
     private float timer = 0f;
+    private float startingPositionY;
+    [SerializeField] float moveUpDownDistance = 0.3f;
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         forwardForceVec = new Vector2(forwardForce, 0);
         backwardForceVec = new Vector2(-backwardForce, 0);
+        startingPositionY = transform.position.y;
 
     }
 
@@ -54,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
             // Move up/down
             if (Input.GetAxis("Vertical") < 0) transform.Translate(0, -verticalY * Time.deltaTime, 0);
             else if (Input.GetAxis("Vertical") > 0) transform.Translate(0, verticalY * Time.deltaTime, 0);
+
+            //up/down velocity 0
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+
+            //clamp up/down
+            transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, startingPositionY - moveUpDownDistance, startingPositionY + moveUpDownDistance));
 
 
             timer += Time.deltaTime;

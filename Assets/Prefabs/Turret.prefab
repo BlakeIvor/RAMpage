@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37138ab867cfddc4a95beee5644c71d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
-  cooldown: 2
+  radius: 2
+  cooldown: 7
   damage: 200
   lineDuration: 3
   linePrefab: {fileID: 4147825467202628940}

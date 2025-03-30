@@ -2,32 +2,40 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-
     [SerializeField] private Camera _camera;
     [SerializeField] Transform target;
-    [SerializeField] float lerpX, lerpY;
-    [SerializeField] float positionX, positionY, positionZ;
+    [SerializeField] float lerpX = 0.1f, lerpY = 0.1f;
+    [SerializeField] float positionZ = -10f;  // Keep the camera at a fixed Z distance, adjust as necessary
+    [SerializeField] float offsetX = 0f, offsetY = 0f;
+    [SerializeField] float minDistanceX = 2.5f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float smoothSpeedX;
+    private float smoothSpeedY;
+
+    // Start is called once before the first execution of Update
     void Start()
     {
-        transform.position = target.position;
-        positionX = target.position.x;
-        positionY = target.position.y;
-        Follow();
-
+        transform.position = target.position + new Vector3(offsetX, transform.position.y, positionZ);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target && GameManager.instance.getAllowInput()) Follow();
+        if (target && GameManager.instance.getAllowInput())
+        {
+            Follow();
+        }
     }
 
     void Follow()
     {
-        positionX = Mathf.Lerp(transform.position.x, target.position.x, lerpX);
-        positionY = Mathf.Lerp(transform.position.y, target.position.y, lerpY);
-        transform.position = new Vector3(positionX, positionY, positionZ);
+        float targetX = target.position.x + offsetX;
+        float targetY = transform.position.y + offsetY;
+
+        transform.position = new Vector3(
+            targetX,
+            targetY,
+            positionZ
+        );
     }
 }
