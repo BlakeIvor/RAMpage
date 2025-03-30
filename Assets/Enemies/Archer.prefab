@@ -88,13 +88,14 @@ MonoBehaviour:
   Reward: 7
   Hitbox: {fileID: 0}
   speed: 1
-  AttackRadius: 3
+  Radius: 3
   Type: {fileID: 11400000, guid: cca99af865580a144a5fd181995c8c6b, type: 2}
   CanAttack: 1
   projectile: {fileID: 1236134301811018601, guid: d8d4a183d9b9756478891cd63c6f31f6, type: 3}
   minDeviation: 2
   maxDeviation: 2
   arrowSpeed: 2
+  AttackRadius: 20
 --- !u!1 &7144305857330053954
 GameObject:
   m_ObjectHideFlags: 0
