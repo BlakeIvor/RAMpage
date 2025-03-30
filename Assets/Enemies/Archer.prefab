@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85c6a27b41d5504faab30430649e738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 400
   baseDamage: 1
   cooldown: 1
   Reward: 0

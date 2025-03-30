@@ -13,15 +13,7 @@ public class Turret : Ability
     public override void Use(MonoBehaviour player)
     {
         Transform spawn = GameObject.Find("PassivePosition").transform;
-        Instantiate(turret, spawn);
-        
+        GameObject newTurret = Instantiate(turret, spawn.position, Quaternion.identity, spawn);
+        spawn.name = "FILLED";
     }
-
-    public IEnumerator Finish(MonoBehaviour player)
-    {
-        yield return new WaitForSeconds(duration);
-        
-    }
-
-    
 }
