@@ -1,23 +1,30 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameObject shopGroupPrefab; // Assign ShopGroup prefab in Inspector
+    GameObject currentShopUI;
+    bool hasSpawnedShopUI = false;
+
+    [Header("Upgrade Levels")]
+    public int bodyLevel;
+    public int wheelLevel;
+    public int frontLevel;
+
     [Header("Battering Ram Variables")]
     public float health;
+    public float maxHealth;
     public float baseDamage;
     public float minMovementSpeed;
     public float maxMovementSpeed;
     public float chargeSpeed;
     public float maxCharge;
-
-
+    public HealthBar healthBar;
     public AbilitiesStruct[] activeAbilities;
 
     [Header("Economy Variables")]
     [SerializeField] int currentMoney;
-    // [SerializeField] float moneyMultiplier
 
     [SerializeField] bool allowInput;
 
@@ -44,32 +51,20 @@ public class GameManager : MonoBehaviour
 
     public void buyUpgrade(int stat, float change)
     {
-        switch(stat) {
-            case 0:
-                health += change;
-                break;
-            case 1:
-                baseDamage += change;
-                break;
-            case 2:
-                maxMovementSpeed += change;
-                break;
-            case 3:
-                maxCharge += change;
-                break;
+        switch (stat)
+        {
+            case 0: health += change; break;
+            case 1: baseDamage += change; break;
+            case 2: maxMovementSpeed += change; break;
+            case 3: maxCharge += change; break;
         }
     }
 
     public float CalculateMovingDamage(float moveSpeed)
     {
-        if (moveSpeed > 0.5)
-        {
-            float damage = moveSpeed * baseDamage;
-            return damage;
-        }
-        return 0.01f;
+        return moveSpeed > 0.5f ? moveSpeed * baseDamage : 0.01f;
     }
-    
+
     public void updateAllowInput(bool b)
     {
         allowInput = b;
@@ -79,11 +74,63 @@ public class GameManager : MonoBehaviour
     {
         return allowInput;
     }
-    private void Update()
+
+    public float getCurrentHealth()
     {
-        if(health <= 0)
+        return health;
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
+    }
+    void Update()
+    {
+        if (health <= 0 && !hasSpawnedShopUI)
         {
-            SceneManager.LoadScene(1);
+            hasSpawnedShopUI = true;
+            SpawnShopUI();
         }
+    }
+
+    void SpawnShopUI()
+    {
+        Time.timeScale = 0f;
+
+        currentShopUI = Instantiate(shopGroupPrefab);
+
+        Transform shopMenu = currentShopUI.transform.Find("Canvas/ShopMenu");
+        if (shopMenu == null)
+        {
+            Debug.LogError("ShopMenu not found inside ShopGroup prefab!");
+            return;
+        }
+
+        CanvasGroup cg = shopMenu.GetComponent<CanvasGroup>();
+        if (cg == null)
+        {
+            cg = shopMenu.gameObject.AddComponent<CanvasGroup>();
+        }
+
+        cg.alpha = 0f;
+        cg.interactable = false;
+        cg.blocksRaycasts = false;
+
+        StartCoroutine(FadeInCanvas(cg, 0.2f));
+    }
+
+    private System.Collections.IEnumerator FadeInCanvas(CanvasGroup cg, float duration)
+    {
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+            cg.alpha = Mathf.Lerp(0f, 1f, t / duration);
+            yield return null;
+        }
+
+        cg.alpha = 1f;
+        cg.interactable = true;
+        cg.blocksRaycasts = true;
     }
 }

@@ -1,25 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class UpgradeSwitcher : MonoBehaviour
 {
-    public int[] tierCosts;         
-    public TextMeshProUGUI costText;        
-    GameManager gameManager; 
-    public Image lockIcon;                  
+    [Header("Upgrade Tiers")]
     public Sprite[] upgradeTiers;
+    public int[] tierCosts;
+    public float[] statIncrease; // How much each tier increases the stat
+    private bool[] isPurchased;
+
+    [Header("UI References")]
     public Image tierImage;
     public TextMeshProUGUI tierLabel;
+    public TextMeshProUGUI costText;
+    public Image lockIcon;
     public Button nextButton;
     public Button previousButton;
-
     public Button purchaseButton;
-    public Image purchaseButtonImage;         
-    public Sprite purchaseSprite;             
-    public Sprite equippedSprite;             
+    public Image purchaseButtonImage;
+    public Sprite purchaseSprite;
+    public Sprite equippedSprite;
 
+    [Header("Upgrade Info")]
+    public UpgradeType upgradeType; // Body, Wheels, Front
+    public int statIndex; // 0 = Health, 1 = Damage, 2 = Speed, 3 = Charge
+
+    private GameManager gameManager;
     private int currentIndex = 0;
-    private bool[] isPurchased;
 
     void Start()
     {
@@ -53,6 +61,26 @@ public class UpgradeSwitcher : MonoBehaviour
         {
             gameManager.updateCurrentMoney(-cost);
             isPurchased[currentIndex] = true;
+
+            // Apply the stat boost
+            float increase = statIncrease[currentIndex];
+            gameManager.buyUpgrade(statIndex, increase);
+
+            // Set the selected level for prefab spawning
+            switch (upgradeType)
+        {
+            case UpgradeType.Body:
+                gameManager.bodyLevel = currentIndex;
+                break;
+            case UpgradeType.Wheels:
+                gameManager.wheelLevel = currentIndex;
+                break;
+            case UpgradeType.Front:
+                gameManager.frontLevel = currentIndex; 
+                break;
+        }
+
+
             UpdateUI();
         }
         else
@@ -60,8 +88,7 @@ public class UpgradeSwitcher : MonoBehaviour
             Debug.Log("Not enough currency or already purchased.");
         }
     }
-
-
+    
     void UpdateUI()
     {
         tierImage.sprite = upgradeTiers[currentIndex];
@@ -77,18 +104,22 @@ public class UpgradeSwitcher : MonoBehaviour
             purchaseButton.interactable = false;
             purchaseButtonImage.sprite = equippedSprite;
             lockIcon.enabled = false;
-            costText.text = "Owned"; 
+            costText.text = "Owned";
         }
         else
         {
             purchaseButton.interactable = gameManager.getCurrentMoney() >= tierCosts[currentIndex];
             purchaseButtonImage.sprite = purchaseSprite;
             lockIcon.enabled = true;
-
-            
             costText.text = $"${tierCosts[currentIndex]}";
         }
+      
     }
+}
 
-
+public enum UpgradeType
+{
+    Body,
+    Wheels,
+    Front 
 }

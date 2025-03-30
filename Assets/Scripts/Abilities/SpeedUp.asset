@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 6
   duration: 6
+  maxChange: 5
+  force: 25
