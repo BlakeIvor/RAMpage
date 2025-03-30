@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class TransitionToNext : MonoBehaviour
 {
     [SerializeField] int sceneNumber = 2;
+    [SerializeField] int resetHealth = 600;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,5 +20,6 @@ public class TransitionToNext : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(sceneNumber);
+        GameManager.instance.health -= resetHealth;
     }
 }

@@ -301,10 +301,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70aab53a1592094cbb5055175d3be11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 600
   baseDamage: 100
   minMovementSpeed: -2
-  maxMovementSpeed: 3
+  maxMovementSpeed: 5
   chargeSpeed: 1
   maxCharge: 1
   currentMoney: 100
