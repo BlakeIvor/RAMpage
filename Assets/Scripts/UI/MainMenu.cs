@@ -4,11 +4,12 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] int sceneToLoad;
     public CanvasGroup creditsPanel;
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1"); 
+        SceneManager.LoadScene(sceneToLoad); 
     }
 
     public void ShowCredits()

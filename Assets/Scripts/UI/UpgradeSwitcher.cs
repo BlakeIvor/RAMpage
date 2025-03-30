@@ -5,7 +5,7 @@ public class UpgradeSwitcher : MonoBehaviour
 {
     public int[] tierCosts;         
     public TextMeshProUGUI costText;        
-    public int playerCurrency = 10000;      // THIS IS A PLACEHOLDER replace later with actual currency.
+    GameManager gameManager; 
     public Image lockIcon;                  
     public Sprite[] upgradeTiers;
     public Image tierImage;
@@ -23,6 +23,7 @@ public class UpgradeSwitcher : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameManager.instance;
         isPurchased = new bool[upgradeTiers.Length];
         UpdateUI();
     }
@@ -48,9 +49,9 @@ public class UpgradeSwitcher : MonoBehaviour
     public void PurchaseCurrentTier()
     {
         int cost = tierCosts[currentIndex];
-        if (playerCurrency >= cost && !isPurchased[currentIndex])
+        if (gameManager.getCurrentMoney() >= cost && !isPurchased[currentIndex])
         {
-            playerCurrency -= cost;
+            gameManager.updateCurrentMoney(-cost);
             isPurchased[currentIndex] = true;
             UpdateUI();
         }
@@ -80,7 +81,7 @@ public class UpgradeSwitcher : MonoBehaviour
         }
         else
         {
-            purchaseButton.interactable = playerCurrency >= tierCosts[currentIndex];
+            purchaseButton.interactable = gameManager.getCurrentMoney() >= tierCosts[currentIndex];
             purchaseButtonImage.sprite = purchaseSprite;
             lockIcon.enabled = true;
 
