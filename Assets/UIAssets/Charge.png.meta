@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: 08e80b2c9976cd442bba07014a7dd9b7
+guid: 944b64193f21bec49a903fbf08759da9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1699452002307262520
-    second: Wheel2_0
+      213: 7043984996573275655
+    second: Charge_0
   - first:
-      213: -4950211493197958588
-    second: Wheel2_1
+      213: -566703658126030194
+    second: Charge_1
   - first:
-      213: 3985515502139419784
-    second: Wheel2_2
+      213: 6256210931507321577
+    second: Charge_2
+  - first:
+      213: -5836993557942118350
+    second: Charge_3
+  - first:
+      213: -1925022604624453576
+    second: Charge_4
+  - first:
+      213: -2250842547723467441
+    second: Charge_5
+  - first:
+      213: -1474126701674958951
+    second: Charge_6
+  - first:
+      213: 7925466270181125623
+    second: Charge_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,19 +118,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -132,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wheel2_0
+      name: Charge_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 227
-        height: 208
+        x: 11
+        y: 259
+        width: 220
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,19 +149,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 838c95e879aa59710800000000000000
-      internalID: 1699452002307262520
+      spriteID: 7066ee3a80341c160800000000000000
+      internalID: 7043984996573275655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wheel2_1
+      name: Charge_1
       rect:
         serializedVersion: 2
-        x: 222
-        y: 70
-        width: 5
+        x: 33
+        y: 265
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8acb74860aa228f0800000000000000
+      internalID: -566703658126030194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Charge_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 265
+        width: 26
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -169,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44231e0dfd05d4bb0800000000000000
-      internalID: -4950211493197958588
+      spriteID: 9ead86402b682d650800000000000000
+      internalID: 6256210931507321577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wheel2_2
+      name: Charge_3
       rect:
         serializedVersion: 2
-        x: 114
-        y: 0
-        width: 35
-        height: 6
+        x: 120
+        y: 265
+        width: 17
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +215,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88c25d7ab356f4730800000000000000
-      internalID: 3985515502139419784
+      spriteID: 238dd96e845defea0800000000000000
+      internalID: -5836993557942118350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Charge_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 264
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83023cae322f845e0800000000000000
+      internalID: -1925022604624453576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Charge_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 265
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f458b99d0a663c0e0800000000000000
+      internalID: -2250842547723467441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Charge_6
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 264
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99feeb83399da8be0800000000000000
+      internalID: -1474126701674958951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Charge_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 247
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd6c71f499ecfd60800000000000000
+      internalID: 7925466270181125623
       vertices: []
       indices: 
       edges: []
@@ -210,10 +322,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Wheel2_0: 1699452002307262520
-      Wheel2_1: -4950211493197958588
-      Wheel2_2: 3985515502139419784
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
