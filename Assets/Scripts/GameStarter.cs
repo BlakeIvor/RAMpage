@@ -25,7 +25,7 @@ public class GameStarter: MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(IntroSequence(1, 1));
-        // Instantiate(rams[level].objectPrefab, playerTransform);
+        //Instantiate(rams[level].objectPrefab, playerTransform);
     }
 
     private void Update()
