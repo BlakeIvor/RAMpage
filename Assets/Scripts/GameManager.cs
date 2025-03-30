@@ -6,18 +6,17 @@ public class GameManager : MonoBehaviour
 {
     [Header("Battering Ram Variables")]
     public float health;
+    public float maxHealth;
     public float baseDamage;
     public float minMovementSpeed;
     public float maxMovementSpeed;
     public float chargeSpeed;
     public float maxCharge;
-
-
+    public HealthBar healthBar;
     public AbilitiesStruct[] activeAbilities;
 
     [Header("Economy Variables")]
     [SerializeField] int currentMoney;
-    // [SerializeField] float moneyMultiplier
 
     [SerializeField] bool allowInput;
 
@@ -78,6 +77,16 @@ public class GameManager : MonoBehaviour
     public bool getAllowInput()
     {
         return allowInput;
+    }
+
+    public float getCurrentHealth()
+    {
+        return health;
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
     }
     private void Update()
     {
