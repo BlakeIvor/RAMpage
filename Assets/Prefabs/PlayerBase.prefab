@@ -345,6 +345,7 @@ MonoBehaviour:
   forwardVerticalY: 4
   backwardVerticalY: 1
   prevVelocityX: 0
+  moveUpDownDistance: 0.5
 --- !u!114 &8877079967391748476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,7 +745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8568748850405032662
 Transform:
   m_ObjectHideFlags: 0
