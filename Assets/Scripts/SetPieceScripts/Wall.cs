@@ -45,5 +45,9 @@ public class Wall : MonoBehaviour
             Damage(gameManager.CalculateMovingDamage(p.prevVelocityX));
             GameManager.instance.health -= 200;
         }
+        else if (collision.TryGetComponent<MagicBallBehavior>(out MagicBallBehavior ball))
+        {
+            Damage(ball.damage);
+        }
     }
 }

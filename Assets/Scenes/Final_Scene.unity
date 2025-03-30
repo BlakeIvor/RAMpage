@@ -50427,6 +50427,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8877079967391748476, guid: 4a5f4bfc49f0187449f7c8be0deed4a3, type: 3}
+      propertyPath: 'm_Abilities.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e8dbcda4f14613f4487a7819180c187c, type: 2}
+    - target: {fileID: 8877079967391748476, guid: 4a5f4bfc49f0187449f7c8be0deed4a3, type: 3}
       propertyPath: 'm_Abilities.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: fe7eb16c66dd4fb4e94ec1d0516e371b, type: 2}
