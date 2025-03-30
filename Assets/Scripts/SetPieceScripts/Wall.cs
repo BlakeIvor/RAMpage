@@ -38,10 +38,12 @@ public class Wall : MonoBehaviour
         {
             gameManager.updateAllowInput(true);
             Damage(gameManager.CalculateMovingDamage(player.prevVelocityX));
+            GameManager.instance.health -= 200;
         } 
         else if (collision.TryGetComponent<PlayerMovement>(out PlayerMovement p))
         {
             Damage(gameManager.CalculateMovingDamage(p.prevVelocityX));
+            GameManager.instance.health -= 200;
         }
     }
 }

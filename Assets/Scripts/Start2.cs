@@ -4,8 +4,10 @@ using UnityEngine;
 public class Start2 : MonoBehaviour
 {
     GameManager gameManager;
-    [SerializeField] int level;
+    [SerializeField] int ramLevel, wheelLevel, weaponsLevel;
     [SerializeField] List<RamObject> rams;
+    [SerializeField] List<RamObject> wheels;
+    [SerializeField] List<RamObject> weapons;
     Transform playerTransform;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +25,8 @@ public class Start2 : MonoBehaviour
 
     void StartGame()
     {
-        Instantiate(rams[level].objectPrefab, playerTransform);
+        Instantiate(rams[ramLevel].objectPrefab, playerTransform);
+        Instantiate(wheels[wheelLevel].objectPrefab, playerTransform);
+        //Instantiate(weapons[weaponsLevel].objectPrefab, playerTransform);
     }
 }

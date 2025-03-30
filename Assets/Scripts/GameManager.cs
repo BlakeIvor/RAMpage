@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -76,5 +78,11 @@ public class GameManager : MonoBehaviour
     {
         return allowInput;
     }
-
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 }
