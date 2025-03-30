@@ -8,7 +8,7 @@ public class Arrow : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(ToString());
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

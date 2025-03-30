@@ -6,28 +6,23 @@ public class Archer : Enemy
     private float Targety;
     public float minDeviation;
     public float maxDeviation;
-    
+    [SerializeField] private float arrowSpeed;
+
     override public void attack()
     {
         GameObject Bullet = Instantiate(projectile, transform.position, Quaternion.identity);
-        
-        Targety = (GameObject.FindWithTag("Player").transform.position.y);
-        
-        Targety -= transform.position.y;
+        Transform target = GameObject.FindWithTag("Player").transform;
 
-        Targety += Random.Range(minDeviation, maxDeviation);
-        
-        Targetx = (GameObject.FindWithTag("Player").transform.position.x);
-        
-        Targetx -= transform.position.x;
-        
-        Targetx += Random.Range(minDeviation, maxDeviation);
+        Vector3 directionVector = (target.position - transform.position).normalized;
 
-        Bullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Targetx, Targety).normalized;
-        Bullet.GetComponent<Arrow>().lifetime = 1;
-        Bullet.GetComponent<Arrow>().damage = baseDamage;
+        Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = directionVector * arrowSpeed;
+        float angle = Mathf.Atan2(directionVector.y, directionVector.x) * Mathf.Rad2Deg;
+        Bullet.transform.rotation = Quaternion.Euler(0,0,angle);
+
         StartCoroutine(AttackCooldown());
     }
+
 
     public override void Update()
     {
