@@ -20,7 +20,6 @@ public class SpeedUp : Ability
     {
         yield return new WaitForSeconds(duration);
         GameManager.instance.maxMovementSpeed -= 3;
-        Debug.Log("RUN");
     }
 
     
