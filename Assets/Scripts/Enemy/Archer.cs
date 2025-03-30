@@ -13,8 +13,6 @@ public class Archer : Enemy
     {
         float distanceX = Mathf.Abs(player.position.x - transform.position.x);
         
-        Debug.Log(distanceX);
-        Debug.Log(distanceX <= AttackRadius);
         if (distanceX <= AttackRadius) {
             GameObject Bullet = Instantiate(projectile, transform.position, Quaternion.identity);
             Transform target = GameObject.FindWithTag("Player").transform;
