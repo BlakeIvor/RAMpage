@@ -49,6 +49,10 @@ public class Enemy : MonoBehaviour
         {
             Damage(gameManager.CalculateMovingDamage(player.prevVelocityX));
         }
+        if (collision.TryGetComponent<MagicBallBehavior>(out MagicBallBehavior magicBallBehavior))
+        {
+            Damage(magicBallBehavior.damage);
+        }
     }
 
     public virtual void attack()
