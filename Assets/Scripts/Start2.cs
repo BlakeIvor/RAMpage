@@ -27,6 +27,6 @@ public class Start2 : MonoBehaviour
     {
         Instantiate(rams[ramLevel].objectPrefab, playerTransform);
         Instantiate(wheels[wheelLevel].objectPrefab, playerTransform);
-        Instantiate(weapons[weaponsLevel].objectPrefab, playerTransform);
+        //Instantiate(weapons[weaponsLevel].objectPrefab, playerTransform);
     }
 }
