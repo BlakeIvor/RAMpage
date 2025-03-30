@@ -208,13 +208,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   baseDamage: 1
-  cooldown: 0
+  cooldown: 1
   Reward: 0
   Hitbox: {fileID: 0}
-  speed: 0
+  speed: 1
   AttackRadius: 0
-  Type: {fileID: 0}
+  Type: {fileID: 11400000, guid: cca99af865580a144a5fd181995c8c6b, type: 2}
   CanAttack: 1
   projectile: {fileID: 1236134301811018601, guid: d8d4a183d9b9756478891cd63c6f31f6, type: 3}
-  minDeviation: 0
-  maxDeviation: 0
+  minDeviation: 2
+  maxDeviation: 2
+  arrowSpeed: 2
