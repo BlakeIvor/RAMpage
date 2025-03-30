@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 0ef9147b58d36cf4aa5bbcad6e4687b7
+guid: d9525eb6d9e8a764496bae45b3fd1894
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6210614144301222057
-    second: Wheel4_0
+      213: -1764360889139715129
+    second: ChargeMeter_0
+  - first:
+      213: -1395324147163788380
+    second: ChargeMeter_1
+  - first:
+      213: -795902337493073233
+    second: ChargeMeter_2
+  - first:
+      213: 8876579512441908644
+    second: ChargeMeter_3
+  - first:
+      213: 2717734589000828508
+    second: ChargeMeter_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +109,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wheel4_0
+      name: ChargeMeter_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 230
-        height: 210
+        x: 36
+        y: 243
+        width: 129
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a84714b8a8803650800000000000000
-      internalID: 6210614144301222057
+      spriteID: 7c32c3b8e1bb387e0800000000000000
+      internalID: -1764360889139715129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeMeter_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 217
+        width: 129
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab07c5b410d2ace0800000000000000
+      internalID: -1395324147163788380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeMeter_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 191
+        width: 129
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa282d97a0364f4f0800000000000000
+      internalID: -795902337493073233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeMeter_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 165
+        width: 129
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad2c935902ff2b70800000000000000
+      internalID: 8876579512441908644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChargeMeter_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 199
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56cf23a53557b520800000000000000
+      internalID: 2717734589000828508
       vertices: []
       indices: 
       edges: []
@@ -160,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Wheel4_0: 6210614144301222057
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
