@@ -6,11 +6,18 @@ public class PlayerAbilities : MonoBehaviour
 {
     [SerializeField] private Ability[] m_Abilities;
     [SerializeField] private Image[] images;
+    [SerializeField] private Ability[] m_Passives;
     private float[] cooldowns;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cooldowns = new float[4] { 0, 0, 0, 0 };
+
+        //ennact all abilities at start
+        foreach(Ability ability in m_Passives)
+        {
+            ability.Use(this);
+        }
     }
 
     // Update is called once per frame
