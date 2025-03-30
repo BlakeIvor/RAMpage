@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int Reward;
     [SerializeField] Collider2D Hitbox;
     [SerializeField] float speed;
-    [SerializeField] float AttackRadius;
+    [SerializeField] float Radius;
     private GameObject Player;
     public EnemyObject Type;
     public bool CanAttack = true;
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
     {
         var step = speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, step);
-        if (Physics2D.OverlapCircle(transform.position, AttackRadius).TryGetComponent<PlayerMovement>(out PlayerMovement player))
+        if (Physics2D.OverlapCircle(transform.position, Radius).TryGetComponent<PlayerMovement>(out PlayerMovement player))
         {
             attack();
         }
