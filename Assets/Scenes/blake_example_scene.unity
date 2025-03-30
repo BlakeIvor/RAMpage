@@ -689,6 +689,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1164232111}
     m_Modifications:
+    - target: {fileID: 2246553354799430839, guid: 596fd898bb8f2624497ed500dcb9ce96, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 1236134301811018601, guid: d8d4a183d9b9756478891cd63c6f31f6, type: 3}
     - target: {fileID: 2880525355635140621, guid: 596fd898bb8f2624497ed500dcb9ce96, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.2565508
@@ -802,6 +806,7 @@ Transform:
   - {fileID: 700471833}
   - {fileID: 1894310770}
   - {fileID: 1526912517}
+  - {fileID: 1613446586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1254906918
@@ -1073,7 +1078,7 @@ Transform:
   m_GameObject: {fileID: 1497603001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1310,7 +1315,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1864271862}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1164232111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647420666
 GameObject:
@@ -1867,6 +1872,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8877079967391748476, guid: 4a5f4bfc49f0187449f7c8be0deed4a3, type: 3}
+      propertyPath: m_Passives.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877079967391748476, guid: 4a5f4bfc49f0187449f7c8be0deed4a3, type: 3}
+      propertyPath: 'm_Passives.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 665cf0c7da5efaa498876e483150b92b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1954,4 +1967,3 @@ SceneRoots:
   - {fileID: 1497603002}
   - {fileID: 1164232111}
   - {fileID: 761625231}
-  - {fileID: 1613446586}

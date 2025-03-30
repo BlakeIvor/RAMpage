@@ -360,6 +360,7 @@ MonoBehaviour:
   m_Abilities:
   - {fileID: 11400000, guid: fe7eb16c66dd4fb4e94ec1d0516e371b, type: 2}
   images: []
+  m_Passives: []
 --- !u!50 &6631497538355517696
 Rigidbody2D:
   serializedVersion: 5
@@ -671,7 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2410713791281931787}
   m_Layer: 0
-  m_Name: Passive2Position
+  m_Name: PassivePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,7 +1347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3935108038845336814}
   m_Layer: 0
-  m_Name: Passive1Position
+  m_Name: PassivePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
