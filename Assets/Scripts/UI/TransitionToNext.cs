@@ -15,10 +15,13 @@ public class TransitionToNext : MonoBehaviour
     {
         
     }
-
-    public void StartGame(int scene)
+    
+    public void StartGame()
     {
-        SceneManager.LoadScene(scene);
-        GameManager.instance.health = resetHealth;
+        Time.timeScale = 1f;
+        Destroy(gameObject); 
+        GameManager.instance.health -= resetHealth;
+        SceneManager.LoadScene(sceneNumber);
     }
+
 }

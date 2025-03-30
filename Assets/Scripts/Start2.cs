@@ -5,9 +5,11 @@ public class Start2 : MonoBehaviour
 {
     GameManager gameManager;
     [SerializeField] int ramLevel, wheelLevel, weaponsLevel;
-    [SerializeField] List<RamObject> rams;
-    [SerializeField] List<RamObject> wheels;
-    [SerializeField] List<RamObject> weapons;
+    [SerializeField] List<GameObject> rams;
+    [SerializeField] List<GameObject> wheels;
+    [SerializeField] List<GameObject> fronts;
+
+
     Transform playerTransform;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,5 +30,14 @@ public class Start2 : MonoBehaviour
         Instantiate(rams[ramLevel].objectPrefab, playerTransform);
         Instantiate(wheels[wheelLevel].objectPrefab, playerTransform);
         //Instantiate(weapons[weaponsLevel].objectPrefab, playerTransform);
+        PlayerBaseController controller = playerTransform.GetComponent<PlayerBaseController>();
+
+        GameObject ram = Instantiate(rams[gameManager.bodyLevel], controller.ramSlot);
+        GameObject wheel = Instantiate(wheels[gameManager.wheelLevel], controller.wheelSlot);
+        GameObject front = Instantiate(fronts[gameManager.frontLevel], controller.frontSlot);
+
+        controller.SetParts(ram, wheel, front);
     }
+
+
 }
