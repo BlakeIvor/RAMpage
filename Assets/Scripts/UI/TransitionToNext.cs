@@ -21,7 +21,7 @@ public class TransitionToNext : MonoBehaviour
         Time.timeScale = 1f;
         Destroy(gameObject); 
         GameManager.instance.health -= resetHealth;
-        SceneManager.LoadScene(sceneNumber);
+        SceneManager.LoadScene(2);
     }
 
 }

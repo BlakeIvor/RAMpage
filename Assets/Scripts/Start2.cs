@@ -27,8 +27,8 @@ public class Start2 : MonoBehaviour
 
     void StartGame()
     {
-        Instantiate(rams[ramLevel].objectPrefab, playerTransform);
-        Instantiate(wheels[wheelLevel].objectPrefab, playerTransform);
+        //Instantiate(rams[ramLevel].objectPrefab, playerTransform);
+        //Instantiate(wheels[wheelLevel].objectPrefab, playerTransform);
         //Instantiate(weapons[weaponsLevel].objectPrefab, playerTransform);
         PlayerBaseController controller = playerTransform.GetComponent<PlayerBaseController>();
 
