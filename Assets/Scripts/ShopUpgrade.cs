@@ -3,14 +3,10 @@ using UnityEngine;
 public class ShopUpgrade : MonoBehaviour
 {
     public enum UpgradeType {
-        Health,
-        BaseDamage,
-        MinMoveSpeed,
-        MaxMoveSpeed,
-        ChargeSpeed,
-        MaxCharge,
-        ClickDamage,
-        ClickCooldown
+        Body,
+        Front,
+        Wheels,
+        Charge
     };
 
     public int level;

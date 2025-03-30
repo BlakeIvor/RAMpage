@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79779b605dc887a4c99f0a5ee713bcd5, type: 3}
-  m_Name: SpeedUp
+  m_Script: {fileID: 11500000, guid: b6941fa281c886340ac6021eff548d5f, type: 3}
+  m_Name: Archer1
   m_EditorClassIdentifier: 
-  cooldown: 6
-  duration: 6
+  health: 0
+  reward: 0
+  damage: 0
+  speed: 0
+  enemysprite: {fileID: 0}
+  Enemy: {fileID: 0}

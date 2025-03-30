@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42ba5de2590b914b8b292efbe0034e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilitySlots: []
 --- !u!4 &664636161
 Transform:
   m_ObjectHideFlags: 0
@@ -2508,8 +2509,6 @@ MonoBehaviour:
   maxMovementSpeed: 8
   chargeSpeed: 0
   maxCharge: 0
-  clickDamage: 0
-  clickCooldown: 0
   currentMoney: 100
   allowInput: 0
 --- !u!4 &2002139989

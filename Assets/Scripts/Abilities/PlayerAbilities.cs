@@ -1,33 +1,47 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerAbilities : MonoBehaviour
 {
     [SerializeField] private Ability[] m_Abilities;
     [SerializeField] private Image[] images;
-
+    private float[] cooldowns;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        cooldowns = new float[4] { 0, 0, 0, 0 };
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < 4; i++)
+        {
+            cooldowns[i] -= Time.deltaTime;
+        }
     }
 
     public void UseAbility(int abilitySlot)
     {
-        try
+        if (m_Abilities[abilitySlot] != null)
         {
-            
-            m_Abilities[abilitySlot].Use(this);
+            // end if ability on CD
+            if (cooldowns[abilitySlot] > 0)
+            {
+                return;
+            }
+            else
+            {
+                float cooldown = m_Abilities[abilitySlot].Cooldown;
+                cooldowns[abilitySlot] = cooldown;
+                m_Abilities[abilitySlot].Use(this);
+                ;
+            }
         }
-        catch {
+        else
+        {
             Debug.Log($"There is no ability in slot {abilitySlot}.");
-                };
+        }
     }
 }
