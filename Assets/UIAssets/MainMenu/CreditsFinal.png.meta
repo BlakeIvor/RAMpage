@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8e9f96ff83720b04a9e6fe01f7d0fc08
+guid: 5ca6b682f2f987d488b6f92dd72c4158
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7725513467537407295
-    second: Paint Layer 5_0
-  - first:
-      213: -3168725125546047560
-    second: Paint Layer 5_1
+      213: 9206368896891395856
+    second: CreditsFinal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -129,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paint Layer 5_0
+      name: CreditsFinal_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 922
-        height: 1241
+        width: 1425
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3d30143199863b60800000000000000
-      internalID: 7725513467537407295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Paint Layer 5_1
-      rect:
-        serializedVersion: 2
-        x: 910
-        y: 880
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8b709f4794d6604d0800000000000000
-      internalID: -3168725125546047560
+      spriteID: 01f9a6afbb793cf70800000000000000
+      internalID: 9206368896891395856
       vertices: []
       indices: 
       edges: []
@@ -176,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Paint Layer 5_0: 7725513467537407295
-      Paint Layer 5_1: -3168725125546047560
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
