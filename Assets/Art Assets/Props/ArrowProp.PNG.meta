@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3faedbdccca4ed34b8bea74dfc4944ac
+guid: 74f788c6c86ce494596dad9d57e5d4fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7019745346455012165
-    second: WallsWall_0
+      213: 4490663346258404135
+    second: ArrowProp_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WallsWall_0
+      name: ArrowProp_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 1
-        width: 548
-        height: 1508
+        x: 0
+        y: 0
+        width: 91
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbcf8d2bccad49e90800000000000000
-      internalID: -7019745346455012165
+      spriteID: 7236997558a025e30800000000000000
+      internalID: 4490663346258404135
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      WallsWall_0: -7019745346455012165
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
