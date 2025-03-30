@@ -38198,7 +38198,8 @@ MonoBehaviour:
   weaponsLevel: 0
   rams:
   - {fileID: 11400000, guid: d649b8ac659403545b1e54a9620f5c59, type: 2}
-  wheels: []
+  wheels:
+  - {fileID: 11400000, guid: f12202c43e05f1d4b9e1bb023517ca99, type: 2}
   weapons: []
 --- !u!1 &1652277309
 GameObject:
@@ -50261,6 +50262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1497603002}
     m_Modifications:
+    - target: {fileID: 797073437935885183, guid: 4a5f4bfc49f0187449f7c8be0deed4a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2054591529932643614, guid: 4a5f4bfc49f0187449f7c8be0deed4a3, type: 3}
       propertyPath: m_Name
       value: PlayerBase
