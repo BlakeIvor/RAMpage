@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject shopGroupPrefab; // Assign ShopGroup prefab in Inspector
     GameObject currentShopUI;
     bool hasSpawnedShopUI = false;
-
+    bool played = false;
     [Header("Upgrade Levels")]
     public int bodyLevel;
     public int wheelLevel;
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
+            GetComponent<AudioSource>().Play();
         }
     }
 

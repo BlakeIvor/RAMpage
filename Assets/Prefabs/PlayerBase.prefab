@@ -323,6 +323,7 @@ Transform:
   - {fileID: 3935108038845336814}
   - {fileID: 2410713791281931787}
   - {fileID: 4211095038707970682}
+  - {fileID: 5466182775996434816}
   - {fileID: 2368533851396310700}
   - {fileID: 1436751215737284795}
   m_Father: {fileID: 0}
@@ -569,7 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ramSlot: {fileID: 1436751215737284795}
   wheelSlot: {fileID: 4211095038707970682}
-  frontSlot: {fileID: 0}
+  frontSlot: {fileID: 5466182775996434816}
   ramPart: {fileID: 0}
   wheelPart: {fileID: 0}
   frontPart: {fileID: 0}
@@ -931,6 +932,37 @@ Transform:
   m_Children:
   - {fileID: 1160691577346434737}
   m_Father: {fileID: 8568748850405032662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5975883534699873734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5466182775996434816}
+  m_Layer: 0
+  m_Name: FrontSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5466182775996434816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975883534699873734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6595259277039642953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6301731758793702183
 GameObject:
